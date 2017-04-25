@@ -3,7 +3,7 @@
 module.exports = Object.freeze({
     
     // App-ID. TODO: set to your own Skill App ID from the developer portal.
-    appId : 'amzn1.ask.skill.20f0f1c9-5541-44c9-87d1-3d779f7f3ee9',
+    appId : '',
     
     //  DynamoDB Table name
     dynamoDBTableName : 'AlexaPomodoro',
@@ -18,6 +18,7 @@ module.exports = Object.freeze({
      */
     states : {
         START_MODE : '',
-        PLAY_MODE : '_PLAY_MODE'
+        PLAY_MODE : '_PLAY_MODE',
+        RESUME_DECISION_MODE : '_RESUME_DECISION_MODE'
     }
 });

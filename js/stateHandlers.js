@@ -10,6 +10,12 @@ var operationNotSupported = function() {
     this.emit(':responseReady');
 }
 
+var helpFunction = function () {
+    var message = 'You are in the Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. Say, next, to stop a ringing alarm.';
+    this.response.speak(message).listen(message);
+    this.emit(':responseReady');
+}
+
 var stateHandlers = {
     startModeIntentHandlers : Alexa.CreateStateHandler(constants.states.START_MODE, {
         /*
@@ -94,12 +100,12 @@ var stateHandlers = {
         'AMAZON.StopIntent' : function () { controller.stop.call(this) },
         'AMAZON.CancelIntent' : function () { controller.stop.call(this) },
         'AMAZON.ResumeIntent' : function () { operationNotSupported.call(this) },
+        'AMAZON.LoopOnIntent' : function () { controller.loopOn.call(this) },
+        'AMAZON.LoopOffIntent' : function () { controller.loopOff.call(this) },
+        'AMAZON.ShuffleOnIntent' : function () { controller.shuffleOn.call(this) },
+        'AMAZON.ShuffleOffIntent' : function () { controller.shuffleOff.call(this) },
         'AMAZON.StartOverIntent' : function () { controller.startOver.call(this) },
-        'AMAZON.HelpIntent' : function () {
-            var message = 'You are in the Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. Say, next, to stop a ringing alarm.';
-            this.response.speak(message).listen(message);
-            this.emit(':responseReady');
-        },
+        'AMAZON.HelpIntent' : function() { helpFunction.call(this) },
         'SessionEndedRequest' : function () {
             // No session ended logic
         },
@@ -120,6 +126,38 @@ var stateHandlers = {
             playTick.call(this);
         },
         'PreviousCommandIssued' : function () { operationNotSupported.call(this) }
+    }),
+    resumeDecisionModeIntentHandlers : Alexa.CreateStateHandler(constants.states.RESUME_DECISION_MODE, {
+        /*
+         *  All Intent Handlers for state : RESUME_DECISION_MODE
+         */
+        'LaunchRequest' : function () {
+            var message = 'You are in the Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. Say, next, to stop a ringing alarm. Would you like to resume?';
+            var reprompt = 'You can say yes to resume or no to play from the top.';
+            this.response.speak(message).listen(reprompt);
+            this.emit(':responseReady');
+        },
+        'AMAZON.YesIntent' : function () { controller.play.call(this) },
+        'AMAZON.NoIntent' : function () { controller.reset.call(this) },
+        'AMAZON.HelpIntent' : function() { helpFunction.call(this) },
+        'AMAZON.StopIntent' : function () {
+            var message = 'Good bye.';
+            this.response.speak(message);
+            this.emit(':responseReady');
+        },
+        'AMAZON.CancelIntent' : function () {
+            var message = 'Good bye.';
+            this.response.speak(message);
+            this.emit(':responseReady');
+        },
+        'SessionEndedRequest' : function () {
+            // No session ended logic
+        },
+        'Unhandled' : function () {
+            var message = 'Sorry, this is not a valid command. Please say help to hear what you can say.';
+            this.response.speak(message).listen(message);
+            this.emit(':responseReady');
+        }
     })
 };
 
