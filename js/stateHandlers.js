@@ -5,7 +5,7 @@ var audioData = require('./audioAssets');
 var constants = require('./constants');
 
 var operationNotSupported = function() {
-    var message = 'Operation not supported. To know what you can do, say, ask tomato timer for help.';
+    var message = 'Operation not supported. To know what you can do, say, ask tomato helper for help.';
     this.response.speak(message);
     this.emit(':responseReady');
 }
@@ -27,7 +27,7 @@ var stateHandlers = {
             //  Change state to START_MODE
             this.handler.state = constants.states.START_MODE;
 
-            var message = 'Welcome to the tomato timer. Say, start, to begin. Or you can say, help, to see what you can do.';
+            var message = 'Welcome to the tomato helper. Say, start, to begin. Or you can say, help, to see what you can do.';
             var reprompt = 'You can say, start, or, help.';
 
             this.response.speak(message).listen(reprompt);
@@ -40,7 +40,7 @@ var stateHandlers = {
             continueFromRinging.call(this);
         },
         'AMAZON.HelpIntent' : function () {
-            var message = 'Tomato timer is a skill to track pomodoro in order to boost productivity. Each pomodoro is 25 minutes long and each break is 5 minutes long. To begin using tomato timer, say, start. To stop a ringing alarm, say, next.';
+            var message = 'Tomato helper is a skill to track pomodoro in order to boost productivity. Each pomodoro is 25 minutes long and each break is 5 minutes long. To begin using tomato helper, say, start. To stop a ringing alarm, say, next.';
             this.response.speak(message).listen(message);
             this.emit(':responseReady');
         },
@@ -58,7 +58,7 @@ var stateHandlers = {
             // No session ended logic
         },
         'Unhandled' : function () {
-            var message = 'Sorry, I could not understand. You can say, ask tomato timer for help.';
+            var message = 'Sorry, I could not understand. You can say, ask tomato helper for help.';
             this.response.speak(message).listen(message);
             this.emit(':responseReady');
         }
@@ -82,7 +82,7 @@ var stateHandlers = {
             //  Change state to START_MODE
             this.handler.state = constants.states.START_MODE;
 
-            var message = 'Welcome to the tomato timer. Say, start, to begin. Or you can say, help, to see what you can do.';
+            var message = 'Welcome to the tomato helper. Say, start, to begin. Or you can say, help, to see what you can do.';
             var reprompt = 'You can say, start, or, help.';
 
             this.response.speak(message).listen(reprompt);
@@ -110,7 +110,7 @@ var stateHandlers = {
             // No session ended logic
         },
         'Unhandled' : function () {
-            var message = 'Sorry, I could not understand. You can say, ask tomato timer for help.';
+            var message = 'Sorry, I could not understand. You can say, ask tomato helper for help.';
             this.response.speak(message).listen(message);
             this.emit(':responseReady');
         }
