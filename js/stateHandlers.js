@@ -11,7 +11,7 @@ var operationNotSupported = function() {
 }
 
 var helpFunction = function () {
-    var message = 'You are in the Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. Say, next, to stop a ringing alarm.';
+    var message = 'You are in the Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. Say, next, to stop a ringing alarm. Say, start, to start using tomato helper.';
     this.response.speak(message).listen(message);
     this.emit(':responseReady');
 }
@@ -123,7 +123,7 @@ var stateHandlers = {
         'PauseCommandIssued' : function () { controller.stop.call(this) },
         'NextCommandIssued' : function () {
             stopRinging.call(this); 
-            playTick.call(this);
+            playTick.call(this, true);
         },
         'PreviousCommandIssued' : function () { operationNotSupported.call(this) }
     }),
@@ -224,23 +224,23 @@ function stopRinging() {
     this.attributes['ringing'] = false;
 }
 
-function playTick() {
+function playTick(noSpeech) {
     var token;
     var url;
 
     if (this.attributes['pomodoro']) {
         // in pomodoro
-        this.response.speak('Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. 25 minutes.');
+        if (!noSpeech) this.response.speak('Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. 25 minutes.');
         url = 'https://s3.amazonaws.com/alexa-pomodoro/tick25m.mp3';
         token = 'pomodoro';
     } else {
         // break
         if ((this.attributes['pomodoroCnt'] + 1) % 4 === 0) {
             // finished a set of 4
-            this.response.speak('Great! You\'ve finished a set of 4 pomodoros. Let\'s break for 20 minutes.');            
+            if (!noSpeech) this.response.speak('Great! You\'ve finished a set of 4 pomodoros. Let\'s break for 20 minutes.');            
             url = 'https://s3.amazonaws.com/alexa-pomodoro/tick20m.mp3'
         } else {
-            this.response.speak('Let\'s break for 5 minutes.');
+            if (!noSpeech) this.response.speak('Let\'s break for 5 minutes.');
             url = 'https://s3.amazonaws.com/alexa-pomodoro/tick5m.mp3'
         }
         token = 'break';
