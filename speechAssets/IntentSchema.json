@@ -4,6 +4,12 @@
       "intent": "StartPomodoro"
     },
     {
+      "intent": "StartSilentPomodoro"
+    },
+    {
+      "intent": "Progress"
+    },
+    {
       "intent": "AMAZON.PauseIntent"
     },
     {

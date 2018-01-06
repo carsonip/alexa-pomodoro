@@ -1,3 +1,13 @@
 StartPomodoro start
 StartPomodoro start helper
 StartPomodoro start timer
+StartSilentPomodoro silent
+StartSilentPomodoro start silent
+StartSilentPomodoro start silent helper
+StartSilentPomodoro start silent timer
+StartSilentPomodoro start silence
+StartSilentPomodoro start silence helper
+StartSilentPomodoro start silence timer
+StartSilentPomodoro start helper silent
+StartSilentPomodoro start timer silent
+Progress progress

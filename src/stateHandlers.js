@@ -10,86 +10,86 @@ var operationNotSupported = function() {
     this.emit(':responseReady');
 }
 
-var helpFunction = function () {
-    var message = 'You are in the Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. Say, next, to stop a ringing alarm. Say, start, to start using tomato helper.';
-    this.response.speak(message).listen(message);
+var progress = function () {
+    var message = 'You are in the Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. Say, next, to stop a ringing alarm. ';
+    this.response.speak(message);
     this.emit(':responseReady');
 }
 
+var newLaunch = function () {
+    this.attributes['pomodoro'] = true;
+    this.attributes['pomodoroCnt'] = 0;
+    //  Change state to START_MODE
+    this.handler.state = constants.states.START_MODE;
+
+    var message = 'Welcome to the tomato helper. If this is your first time using this skill, say, help. \
+                    Remember, when the alarm rings, say, next, to stop it. \
+                    Now, say, start timer, to begin. Say, start silent timer, for a silent timer.';
+    var reprompt = 'You can say, start, start silent timer, or, help.';
+
+    this.response.speak(message).listen(reprompt);
+    this.emit(':responseReady');
+}
+
+var commonHandler = {
+    'StartPomodoro' : function () {
+        this.attributes['silent'] = false;
+        controller.play.call(this);
+    },
+    'StartSilentPomodoro' : function () {
+        this.attributes['silent'] = true;
+        controller.play.call(this);
+    },
+    'Continue' : function () {
+        continueFromRinging.call(this);
+    },
+    'Progress' : function () {
+        progress.call(this);
+    },
+    'AMAZON.HelpIntent' : function () {
+        var message = 'Tomato helper is a skill to track pomodoro in order to boost productivity. Each pomodoro is 25 minutes long and each break is 5 minutes long. \
+                        After 4 pomodoros, you have a 20 minute break. \
+                        When the alarm rings, say, next. \
+                        To check your progress during the timer, say, Alexa, ask tomato helper for progress. \
+                        To begin using tomato helper, say, start timer, or, start silent timer. ';
+        this.response.speak(message).listen('To begin using tomato helper, say, start timer, or, start silent timer. ');
+        this.emit(':responseReady');
+    },
+    'AMAZON.StopIntent' : function () {
+        var message = 'Good bye.';
+        this.response.speak(message);
+        this.emit(':responseReady');
+    },
+    'AMAZON.CancelIntent' : function () {
+        var message = 'Good bye.';
+        this.response.speak(message);
+        this.emit(':responseReady');
+    },
+    'SessionEndedRequest' : function () {
+        // No session ended logic
+    },
+    'Unhandled' : function () {
+        var message = 'Sorry, I could not understand. You can say, ask tomato helper for help.';
+        this.response.speak(message).listen(message);
+        this.emit(':responseReady');
+    }
+}
+
 var stateHandlers = {
-    startModeIntentHandlers : Alexa.CreateStateHandler(constants.states.START_MODE, {
+    startModeIntentHandlers : Alexa.CreateStateHandler(constants.states.START_MODE, Object.assign({
         /*
          *  All Intent Handlers for state : START_MODE
          */
         'LaunchRequest' : function () {
-            this.attributes['pomodoro'] = true;
-            this.attributes['pomodoroCnt'] = 0;
-            //  Change state to START_MODE
-            this.handler.state = constants.states.START_MODE;
-
-            var message = 'Welcome to the tomato helper. Say, start, to begin. Or you can say, help, to see what you can do.';
-            var reprompt = 'You can say, start, or, help.';
-
-            this.response.speak(message).listen(reprompt);
-            this.emit(':responseReady');
+            newLaunch.call(this);
         },
-        'StartPomodoro' : function () {
-            controller.play.call(this);
-        },
-        'Continue' : function () {
-            continueFromRinging.call(this);
-        },
-        'AMAZON.HelpIntent' : function () {
-            var message = 'Tomato helper is a skill to track pomodoro in order to boost productivity. Each pomodoro is 25 minutes long and each break is 5 minutes long. To begin using tomato helper, say, start. To stop a ringing alarm, say, next.';
-            this.response.speak(message).listen(message);
-            this.emit(':responseReady');
-        },
-        'AMAZON.StopIntent' : function () {
-            var message = 'Good bye.';
-            this.response.speak(message);
-            this.emit(':responseReady');
-        },
-        'AMAZON.CancelIntent' : function () {
-            var message = 'Good bye.';
-            this.response.speak(message);
-            this.emit(':responseReady');
-        },
-        'SessionEndedRequest' : function () {
-            // No session ended logic
-        },
-        'Unhandled' : function () {
-            var message = 'Sorry, I could not understand. You can say, ask tomato helper for help.';
-            this.response.speak(message).listen(message);
-            this.emit(':responseReady');
-        }
-    }),
-    playModeIntentHandlers : Alexa.CreateStateHandler(constants.states.PLAY_MODE, {
+    }, commonHandler)),
+    playModeIntentHandlers : Alexa.CreateStateHandler(constants.states.PLAY_MODE, Object.assign({
         /*
          *  All Intent Handlers for state : PLAY_MODE
          */
         'LaunchRequest' : function () {
-            /*
-             *  Session resumed in PLAY_MODE STATE.
-             *  If playback had finished during last session :
-             *      Give welcome message.
-             *      Change state to START_STATE to restrict user inputs.
-             *  Else :
-             *      Ask user if he/she wants to resume from last position.
-             *      Change state to RESUME_DECISION_MODE
-             */
-            this.attributes['pomodoro'] = true;
-            this.attributes['pomodoroCnt'] = 0;
-            //  Change state to START_MODE
-            this.handler.state = constants.states.START_MODE;
-
-            var message = 'Welcome to the tomato helper. Say, start, to begin. Or you can say, help, to see what you can do.';
-            var reprompt = 'You can say, start, or, help.';
-
-            this.response.speak(message).listen(reprompt);
-            this.emit(':responseReady');
-        },
-        'StartPomodoro' : function () {
-            controller.play.call(this);
+            newLaunch.call(this);
         },
         'AMAZON.NextIntent' : function () {
             stopRinging.call(this); 
@@ -105,16 +105,7 @@ var stateHandlers = {
         'AMAZON.ShuffleOnIntent' : function () { controller.shuffleOn.call(this) },
         'AMAZON.ShuffleOffIntent' : function () { controller.shuffleOff.call(this) },
         'AMAZON.StartOverIntent' : function () { controller.startOver.call(this) },
-        'AMAZON.HelpIntent' : function() { helpFunction.call(this) },
-        'SessionEndedRequest' : function () {
-            // No session ended logic
-        },
-        'Unhandled' : function () {
-            var message = 'Sorry, I could not understand. You can say, ask tomato helper for help.';
-            this.response.speak(message).listen(message);
-            this.emit(':responseReady');
-        }
-    }),
+    }, commonHandler)),
     remoteControllerHandlers : Alexa.CreateStateHandler(constants.states.PLAY_MODE, {
         /*
          *  All Requests are received using a Remote Control. Calling corresponding handlers for each of them.
@@ -127,38 +118,19 @@ var stateHandlers = {
         },
         'PreviousCommandIssued' : function () { operationNotSupported.call(this) }
     }),
-    resumeDecisionModeIntentHandlers : Alexa.CreateStateHandler(constants.states.RESUME_DECISION_MODE, {
+    resumeDecisionModeIntentHandlers : Alexa.CreateStateHandler(constants.states.RESUME_DECISION_MODE, Object.assign({
         /*
          *  All Intent Handlers for state : RESUME_DECISION_MODE
          */
         'LaunchRequest' : function () {
             var message = 'You are in the Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. Say, next, to stop a ringing alarm. Would you like to resume?';
-            var reprompt = 'You can say yes to resume or no to play from the top.';
+            var reprompt = 'You can say yes to resume or no to play from the beginning.';
             this.response.speak(message).listen(reprompt);
             this.emit(':responseReady');
         },
         'AMAZON.YesIntent' : function () { controller.play.call(this) },
         'AMAZON.NoIntent' : function () { controller.reset.call(this) },
-        'AMAZON.HelpIntent' : function() { helpFunction.call(this) },
-        'AMAZON.StopIntent' : function () {
-            var message = 'Good bye.';
-            this.response.speak(message);
-            this.emit(':responseReady');
-        },
-        'AMAZON.CancelIntent' : function () {
-            var message = 'Good bye.';
-            this.response.speak(message);
-            this.emit(':responseReady');
-        },
-        'SessionEndedRequest' : function () {
-            // No session ended logic
-        },
-        'Unhandled' : function () {
-            var message = 'Sorry, this is not a valid command. Please say help to hear what you can say.';
-            this.response.speak(message).listen(message);
-            this.emit(':responseReady');
-        }
-    })
+    }, commonHandler))
 };
 
 module.exports = stateHandlers;
@@ -231,17 +203,17 @@ function playTick(noSpeech) {
     if (this.attributes['pomodoro']) {
         // in pomodoro
         if (!noSpeech) this.response.speak('Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. 25 minutes.');
-        url = audioData.getUrl('tick25m');
+        url = audioData.getUrl('tick25m', this.attributes['silent']);
         token = 'pomodoro';
     } else {
         // break
         if ((this.attributes['pomodoroCnt'] + 1) % 4 === 0) {
             // finished a set of 4
             if (!noSpeech) this.response.speak('Great! You\'ve finished a set of 4 pomodoros. Let\'s break for 20 minutes.');            
-            url = audioData.getUrl('tick20m');
+            url = audioData.getUrl('tick20m', this.attributes['silent']);
         } else {
             if (!noSpeech) this.response.speak('Let\'s break for 5 minutes.');
-            url = audioData.getUrl('tick5m');
+            url = audioData.getUrl('tick5m', this.attributes['silent']);
         }
         token = 'break';
     }
