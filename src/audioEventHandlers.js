@@ -66,7 +66,7 @@ var audioEventHandlers = Alexa.CreateStateHandler(constants.states.PLAY_MODE, {
             this.attributes['enqueuedToken'] = enqueueToken;
         
             var playBehavior = 'ENQUEUE';
-            var url = 'https://s3.amazonaws.com/alexa-pomodoro/ring.mp3';
+            var url = audioData.getUrl('ring');
             var expectedPreviousToken = this.attributes['token'];
             var offsetInMilliseconds = 0;
             

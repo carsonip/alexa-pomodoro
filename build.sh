@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-cd js
+
 rm -f js.zip
-zip -r js.zip .
+cd src
+zip -r ../js.zip .

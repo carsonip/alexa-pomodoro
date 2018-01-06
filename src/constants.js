@@ -1,9 +1,9 @@
 "use strict";
-
+var APP_ID = process.env.APP_ID;
 module.exports = Object.freeze({
     
     // App-ID. TODO: set to your own Skill App ID from the developer portal.
-    appId : 'amzn1.ask.skill.245739de-c234-4126-9a15-d05f9caa41fe',
+    appId : APP_ID,
     
     //  DynamoDB Table name
     dynamoDBTableName : 'AlexaPomodoro',

@@ -231,17 +231,17 @@ function playTick(noSpeech) {
     if (this.attributes['pomodoro']) {
         // in pomodoro
         if (!noSpeech) this.response.speak('Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. 25 minutes.');
-        url = 'https://s3.amazonaws.com/alexa-pomodoro/tick25m.mp3';
+        url = audioData.getUrl('tick25m');
         token = 'pomodoro';
     } else {
         // break
         if ((this.attributes['pomodoroCnt'] + 1) % 4 === 0) {
             // finished a set of 4
             if (!noSpeech) this.response.speak('Great! You\'ve finished a set of 4 pomodoros. Let\'s break for 20 minutes.');            
-            url = 'https://s3.amazonaws.com/alexa-pomodoro/tick20m.mp3'
+            url = audioData.getUrl('tick20m');
         } else {
             if (!noSpeech) this.response.speak('Let\'s break for 5 minutes.');
-            url = 'https://s3.amazonaws.com/alexa-pomodoro/tick5m.mp3'
+            url = audioData.getUrl('tick5m');
         }
         token = 'break';
     }
