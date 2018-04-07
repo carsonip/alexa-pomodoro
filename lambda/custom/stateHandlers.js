@@ -29,7 +29,7 @@ var newLaunch = function () {
 
     var message = 'Welcome to the tomato helper. If this is your first time using this skill, say, help. \
                     Remember, when the alarm rings, say, next, to stop it. \
-                    Now, say, start timer, to begin. Say, start silent timer, for a silent timer.';
+                    Now, say, start timer, or, start silent timer.';
     var reprompt = 'You can say, start, start silent timer, or, help.';
 
     this.response.speak(message).listen(reprompt);
