@@ -11,8 +11,14 @@ var operationNotSupported = function() {
 }
 
 var progress = function () {
+    var message;
     var offsetInMinutes = Math.round(this.attributes['offsetInMilliseconds'] / 1000 / 60);
-    var message = `You are in the Pomodoro number ${this.attributes['pomodoroCnt'] + 1} at ${offsetInMinutes} minutes. ${25 - offsetInMinutes} minutes remaining. Say, next, to stop a ringing alarm. `;
+    var inPomodoro = this.attributes['pomodoro'];
+    if (inPomodoro) {
+        message = `You are in the Pomodoro number ${this.attributes['pomodoroCnt'] + 1} at ${offsetInMinutes} minutes. ${25 - offsetInMinutes} minutes remaining. When the alarm rings, say, next. `;
+    } else {
+        message = `You are taking a break after Pomodoro number ${this.attributes['pomodoroCnt'] + 1}, and the break has started for ${offsetInMinutes} minutes. When the alarm rings, say, next. `;
+    }
     this.response.speak(message);
     this.emit(':responseReady');
 }
