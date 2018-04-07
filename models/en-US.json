@@ -1,0 +1,67 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "tomato helper",
+      "intents": [
+        {
+          "name": "StartPomodoro",
+          "samples": [
+            "start",
+            "start helper",
+            "start timer"
+          ]
+        },
+        {
+          "name": "StartSilentPomodoro",
+          "samples": [
+            "silent",
+            "start silent",
+            "start silent helper",
+            "start silent timer",
+            "start silence",
+            "start silence helper",
+            "start silence timer",
+            "start helper silent",
+            "start timer silent"
+          ]
+        },
+        {
+          "name": "Progress",
+          "samples": [
+            "progress"
+          ]
+        },
+        {
+          "name": "AMAZON.PauseIntent"
+        },
+        {
+          "name": "AMAZON.ResumeIntent"
+        },
+        {
+          "name": "AMAZON.NextIntent"
+        },
+        {
+          "name": "AMAZON.PreviousIntent"
+        },
+        {
+          "name": "AMAZON.HelpIntent"
+        },
+        {
+          "name": "AMAZON.StopIntent"
+        },
+        {
+          "name": "AMAZON.CancelIntent"
+        },
+        {
+          "name": "AMAZON.StartOverIntent"
+        },
+        {
+          "name": "AMAZON.YesIntent"
+        },
+        {
+          "name": "AMAZON.NoIntent"
+        }
+      ]
+    }
+  }
+}

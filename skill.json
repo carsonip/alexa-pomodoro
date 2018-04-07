@@ -1,0 +1,133 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Unofficial skill of the Pomodoro Technique which boosts your productivity using a 25-minute work and 5-minute rest pattern.",
+          "examplePhrases": [
+            "Alexa, start Tomato Helper",
+            "Start timer",
+            "Alexa, next"
+          ],
+          "keywords": [
+            "pomodoro",
+            "timer",
+            "tomato",
+            "helper",
+            "productivity",
+            "technique"
+          ],
+          "name": "Tomato Helper",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4f50894025134ad28e732ecfa516f322/APP_ICON?versionId=65hwYkpD85KnQ4Z5DxbnJoGbbtMvvduz&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=%2F6X2CJN%2BduhZ6sG0XicRrFxU5D0%3D",
+          "description": "Your voices have been heard! A silent timer is now available. If you have any more comments, create an issue in GitHub issues. The link is at the bottom.\n\nThis is an unofficial skill of the Pomodoro Technique. It is a timer which allows the user to work for 25 minutes then rest for 5 minutes. Such a pattern boosts productivity and minimizes distraction.\n\nAfter saying \"Alexa, start tomato helper\", followed by \"start timer\" or \"start silent timer\", there will be a 25-minute count-down. After 25 minutes, the alarm will ring to notify the user that it is time for a break. The user should say \"Alexa, next\" to stop the alarm and start the break. After the break, the user should say \"Alexa, next\" to start the next 25-minute of work. After 4 25-minute periods, there will be a longer break of 20 minutes.\n\nWhen the timer is running, say \"Alexa, ask tomato helper for progress\" to check your progress.\n\nThis is an open-source project hosted on GitHub available at https://github.com/carsonip/alexa-pomodoro\nIf you have any issues or comments, please create an issue at https://github.com/carsonip/alexa-pomodoro/issues\n\nNote: This skill is in no way associated with the \"Pomodoro Technique\", \"Pomodoro\" and Francesco Cirillo.\nThe Pomodoro Technique® and Pomodoro™ are registered trademarks by Francesco Cirillo.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/e8d3/8b22757cd5594017962ed32a77e8abec/APP_ICON_LARGE?versionId=rxa8boqcQJbnQA_SFzxJhvC9rlw4Vu_C&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=ffkPk%2B5Vj6Lhs24fj503giwYXE8%3D"
+        },
+        "en-CA": {
+          "summary": "Unofficial skill of the Pomodoro Technique which boosts your productivity using a 25-minute work and 5-minute rest pattern.",
+          "examplePhrases": [
+            "Alexa, start Tomato Helper",
+            "Start timer",
+            "Alexa, next"
+          ],
+          "keywords": [
+            "pomodoro",
+            "timer",
+            "tomato",
+            "helper",
+            "productivity",
+            "technique"
+          ],
+          "name": "Tomato Helper",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4f50894025134ad28e732ecfa516f322/APP_ICON?versionId=65hwYkpD85KnQ4Z5DxbnJoGbbtMvvduz&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=%2F6X2CJN%2BduhZ6sG0XicRrFxU5D0%3D",
+          "description": "Your voices have been heard! A silent timer is now available. If you have any more comments, create an issue in GitHub issues. The link is at the bottom.\n\nThis is an unofficial skill of the Pomodoro Technique. It is a timer which allows the user to work for 25 minutes then rest for 5 minutes. Such a pattern boosts productivity and minimizes distraction.\n\nAfter saying \"Alexa, start tomato helper\", followed by \"start timer\" or \"start silent timer\", there will be a 25-minute count-down. After 25 minutes, the alarm will ring to notify the user that it is time for a break. The user should say \"Alexa, next\" to stop the alarm and start the break. After the break, the user should say \"Alexa, next\" to start the next 25-minute of work. After 4 25-minute periods, there will be a longer break of 20 minutes.\n\nWhen the timer is running, say \"Alexa, ask tomato helper for progress\" to check your progress.\n\nThis is an open-source project hosted on GitHub available at https://github.com/carsonip/alexa-pomodoro\nIf you have any issues or comments, please create an issue at https://github.com/carsonip/alexa-pomodoro/issues\n\nNote: This skill is in no way associated with the \"Pomodoro Technique\", \"Pomodoro\" and Francesco Cirillo.\nThe Pomodoro Technique® and Pomodoro™ are registered trademarks by Francesco Cirillo.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c693/e02cbc6f32234623859d94f95e880194/APP_ICON_LARGE?versionId=xMlf.Bv8SvZue8qKNq10if6UBV6Ab.PG&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=xMX0TzGfONed1q2sGdrvL3ZrHWI%3D"
+        },
+        "en-IN": {
+          "summary": "Unofficial skill of the Pomodoro Technique which boosts your productivity using a 25-minute work and 5-minute rest pattern.",
+          "examplePhrases": [
+            "Alexa, start Tomato Helper",
+            "Start timer",
+            "Alexa, next"
+          ],
+          "keywords": [
+            "pomodoro",
+            "timer",
+            "tomato",
+            "helper",
+            "productivity",
+            "technique"
+          ],
+          "name": "Tomato Helper",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4f50894025134ad28e732ecfa516f322/APP_ICON?versionId=65hwYkpD85KnQ4Z5DxbnJoGbbtMvvduz&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=%2F6X2CJN%2BduhZ6sG0XicRrFxU5D0%3D",
+          "description": "Your voices have been heard! A silent timer is now available. If you have any more comments, create an issue in GitHub issues. The link is at the bottom.\n\nThis is an unofficial skill of the Pomodoro Technique. It is a timer which allows the user to work for 25 minutes then rest for 5 minutes. Such a pattern boosts productivity and minimizes distraction.\n\nAfter saying \"Alexa, start tomato helper\", followed by \"start timer\" or \"start silent timer\", there will be a 25-minute count-down. After 25 minutes, the alarm will ring to notify the user that it is time for a break. The user should say \"Alexa, next\" to stop the alarm and start the break. After the break, the user should say \"Alexa, next\" to start the next 25-minute of work. After 4 25-minute periods, there will be a longer break of 20 minutes.\n\nWhen the timer is running, say \"Alexa, ask tomato helper for progress\" to check your progress.\n\nThis is an open-source project hosted on GitHub available at https://github.com/carsonip/alexa-pomodoro\nIf you have any issues or comments, please create an issue at https://github.com/carsonip/alexa-pomodoro/issues\n\nNote: This skill is in no way associated with the \"Pomodoro Technique\", \"Pomodoro\" and Francesco Cirillo.\nThe Pomodoro Technique® and Pomodoro™ are registered trademarks by Francesco Cirillo.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/46a7/f63db9a6af0a4ba08c7a7ce36212e9cb/APP_ICON_LARGE?versionId=nyWWgkSta2nhGV41kpH19RFTrH0Am5up&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=vavEH%2F8Dz7irb%2FemXN4qQpNpAnk%3D"
+        },
+        "en-AU": {
+          "summary": "Unofficial skill of the Pomodoro Technique which boosts your productivity using a 25-minute work and 5-minute rest pattern.",
+          "examplePhrases": [
+            "Alexa, start Tomato Helper",
+            "Start timer",
+            "Alexa, next"
+          ],
+          "keywords": [
+            "pomodoro",
+            "timer",
+            "tomato",
+            "helper",
+            "productivity",
+            "technique"
+          ],
+          "name": "Tomato Helper",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/431d/d3c18c1cbac049b88fbc92d3b06d795a/APP_ICON?versionId=rnBs7K3ZHygWqzOZhfA.Iyip9SuM3Eyr&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=ibXFa2WwHjCrpqCTf9ThEqUMqIo%3D",
+          "description": "Your voices have been heard! A silent timer is now available. If you have any more comments, create an issue in GitHub issues. The link is at the bottom.\n\nThis is an unofficial skill of the Pomodoro Technique. It is a timer which allows the user to work for 25 minutes then rest for 5 minutes. Such a pattern boosts productivity and minimizes distraction.\n\nAfter saying \"Alexa, start tomato helper\", followed by \"start timer\" or \"start silent timer\", there will be a 25-minute count-down. After 25 minutes, the alarm will ring to notify the user that it is time for a break. The user should say \"Alexa, next\" to stop the alarm and start the break. After the break, the user should say \"Alexa, next\" to start the next 25-minute of work. After 4 25-minute periods, there will be a longer break of 20 minutes.\n\nWhen the timer is running, say \"Alexa, ask tomato helper for progress\" to check your progress.\n\nThis is an open-source project hosted on GitHub available at https://github.com/carsonip/alexa-pomodoro\nIf you have any issues or comments, please create an issue at https://github.com/carsonip/alexa-pomodoro/issues\n\nNote: This skill is in no way associated with the \"Pomodoro Technique\", \"Pomodoro\" and Francesco Cirillo.\nThe Pomodoro Technique® and Pomodoro™ are registered trademarks by Francesco Cirillo.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/31b8/1040496e23104b649f92213df9a60249/APP_ICON_LARGE?versionId=x2hpGyUCl0tU.PGkRU3DwDf7bsfC1bQ3&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=Yo5d5ujgaXXBOWbNxSZBnH9%2FwwQ%3D"
+        },
+        "en-GB": {
+          "summary": "Unofficial skill of the Pomodoro Technique which boosts your productivity using a 25-minute work and 5-minute rest pattern.",
+          "examplePhrases": [
+            "Alexa, start Tomato Helper",
+            "Start timer",
+            "Alexa, next"
+          ],
+          "keywords": [
+            "pomodoro",
+            "timer",
+            "tomato",
+            "helper",
+            "productivity",
+            "technique"
+          ],
+          "name": "Tomato Helper",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/ff23/33ccb65d1b58484da282350f09fde394/APP_ICON?versionId=483Gg3ZJYOPZ4w4J8OXJLx4m2c0Mpq87&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=o0cxKIiko72VxQi7IoOJBSYIjJw%3D",
+          "description": "Your voices have been heard! A silent timer is now available. If you have any more comments, create an issue in GitHub issues. The link is at the bottom.\n\nThis is an unofficial skill of the Pomodoro Technique. It is a timer which allows the user to work for 25 minutes then rest for 5 minutes. Such a pattern boosts productivity and minimizes distraction.\n\nAfter saying \"Alexa, start tomato helper\", followed by \"start timer\" or \"start silent timer\", there will be a 25-minute count-down. After 25 minutes, the alarm will ring to notify the user that it is time for a break. The user should say \"Alexa, next\" to stop the alarm and start the break. After the break, the user should say \"Alexa, next\" to start the next 25-minute of work. After 4 25-minute periods, there will be a longer break of 20 minutes.\n\nWhen the timer is running, say \"Alexa, ask tomato helper for progress\" to check your progress.\n\nThis is an open-source project hosted on GitHub available at https://github.com/carsonip/alexa-pomodoro\nIf you have any issues or comments, please create an issue at https://github.com/carsonip/alexa-pomodoro/issues\n\nNote: This skill is in no way associated with the \"Pomodoro Technique\", \"Pomodoro\" and Francesco Cirillo.\nThe Pomodoro Technique® and Pomodoro™ are registered trademarks by Francesco Cirillo.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/8772/40698efd4214494cabd1f1401a47d4ed/APP_ICON_LARGE?versionId=xrg8dZphu4uxkS9U_qDTiafbFwT4qTfK&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=KpEQiMRperiZZ%2FEgtVPuig8vbDc%3D"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Saying \"Alexa, next\" during ticking can skip you to the ringing alarm part. So you don't have to wait for 25mins before the alarm.",
+      "category": "ORGANIZERS_AND_ASSISTANTS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        },
+        "interfaces": [
+          {
+            "type": "AUDIO_PLAYER"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}
