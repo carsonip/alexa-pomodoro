@@ -26,6 +26,12 @@
           ]
         },
         {
+          "name": "Progress",
+          "samples": [
+            "progress"
+          ]
+        },
+        {
           "name": "AMAZON.PauseIntent"
         },
         {
