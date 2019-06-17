@@ -1,0 +1,32 @@
+{
+    "en": {
+        "translation": {
+            "DEVICE_NOT_SUPPORTED": "Sorry, this skill is not supported on this device",
+
+            "OPERATION_NOT_SUPPORTED": "Operation not supported. To know what you can do, say, ask tomato helper for help.",
+
+            "WELCOME": "Welcome to the tomato helper. If this is your first time using this skill, say, help. Remember, when the alarm rings, say, next, to stop it. Now, say, start timer, or, start silent timer.",
+            "WELCOME_REPROMPT": "You can say, start, start silent timer, or, help.",
+
+            "HELP": "Tomato helper is a skill to track pomodoro in order to boost productivity. Each pomodoro is 25 minutes long and each break is 5 minutes long. After 4 pomodoros, you have a 20 minute break. When the alarm rings, say, next. To check your progress during the timer, say, Alexa, ask tomato helper for progress. To begin using tomato helper, say, start timer, or, start silent timer. ",
+            "HELP_REPROMPT": "To begin using tomato helper, say, start timer, or, start silent timer.",
+
+            "BYE": "Good bye.",
+
+            "UNHANDLED": "Sorry, I could not understand. You can say, ask tomato helper for help.",
+
+            "RESUME_DECISION": "You are in the Pomodoro number %s. Say, next, to stop a ringing alarm. Would you like to resume?",
+            "RESUME_DECISION_REPROMPT": "You can say yes to resume or no to play from the beginning.",
+
+            "PROGRESS_POMODORO": "You are in the Pomodoro number %s at %s minutes. %s minutes remaining. When the alarm rings, say, next. ",
+            "PROGRESS_BREAK": "You are taking a break after Pomodoro number %s, and the break has started for %s minutes. When the alarm rings, say, next. ",
+
+            "RESUME_FROM_POMODORO": "Resuming from Pomodoro number %s at %s minutes. %s minutes remaining. ",
+            "RESUME_FROM_BREAK": "Pomodoro number %s. 25 minutes. ",
+            "STARTING_NOW": "Starting Now.",
+
+            "BREAK_FINISH_SET": "Great! You've finished a set of 4 pomodoros. Let's break for 20 minutes.",
+            "BREAK_NORMAL": "Let's break for 5 minutes."
+        }
+    }
+}

@@ -5,7 +5,7 @@ var audioData = require('./audioAssets');
 var constants = require('./constants');
 
 var operationNotSupported = function() {
-    var message = 'Operation not supported. To know what you can do, say, ask tomato helper for help.';
+    var message = this.t('OPERATION_NOT_SUPPORTED');
     this.response.speak(message);
     this.emit(':responseReady');
 }
@@ -15,9 +15,9 @@ var progress = function () {
     var offsetInMinutes = Math.round(this.attributes['offsetInMilliseconds'] / 1000 / 60);
     var inPomodoro = this.attributes['pomodoro'];
     if (inPomodoro) {
-        message = `You are in the Pomodoro number ${this.attributes['pomodoroCnt'] + 1} at ${offsetInMinutes} minutes. ${25 - offsetInMinutes} minutes remaining. When the alarm rings, say, next. `;
+        message = this.t('PROGRESS_POMODORO', this.attributes['pomodoroCnt'] + 1, offsetInMinutes, 25 - offsetInMinutes);
     } else {
-        message = `You are taking a break after Pomodoro number ${this.attributes['pomodoroCnt'] + 1}, and the break has started for ${offsetInMinutes} minutes. When the alarm rings, say, next. `;
+        message = this.t('PROGRESS_BREAK', this.attributes['pomodoroCnt'] + 1, offsetInMinutes);
     }
     this.response.speak(message);
     this.emit(':responseReady');
@@ -27,10 +27,8 @@ var newLaunch = function () {
     //  Change state to START_MODE
     this.handler.state = constants.states.START_MODE;
 
-    var message = 'Welcome to the tomato helper. If this is your first time using this skill, say, help. \
-                    Remember, when the alarm rings, say, next, to stop it. \
-                    Now, say, start timer, or, start silent timer.';
-    var reprompt = 'You can say, start, start silent timer, or, help.';
+    var message = this.t('WELCOME');
+    var reprompt = this.t('WELCOME_REPROMPT');
 
     this.response.speak(message).listen(reprompt);
     this.emit(':responseReady');
@@ -56,21 +54,17 @@ var commonHandler = {
         progress.call(this);
     },
     'AMAZON.HelpIntent' : function () {
-        var message = 'Tomato helper is a skill to track pomodoro in order to boost productivity. Each pomodoro is 25 minutes long and each break is 5 minutes long. \
-                        After 4 pomodoros, you have a 20 minute break. \
-                        When the alarm rings, say, next. \
-                        To check your progress during the timer, say, Alexa, ask tomato helper for progress. \
-                        To begin using tomato helper, say, start timer, or, start silent timer. ';
-        this.response.speak(message).listen('To begin using tomato helper, say, start timer, or, start silent timer. ');
+        var message = this.t('HELP');
+        this.response.speak(message).listen(this.t('HELP_REPROMPT'));
         this.emit(':responseReady');
     },
     'AMAZON.StopIntent' : function () {
-        var message = 'Good bye.';
+        var message = this.t('BYE');
         this.response.speak(message);
         this.emit(':responseReady');
     },
     'AMAZON.CancelIntent' : function () {
-        var message = 'Good bye.';
+        var message = this.t('BYE');
         this.response.speak(message);
         this.emit(':responseReady');
     },
@@ -78,7 +72,7 @@ var commonHandler = {
         // No session ended logic
     },
     'Unhandled' : function () {
-        var message = 'Sorry, I could not understand. You can say, ask tomato helper for help.';
+        var message = this.t('UNHANDLED');
         this.response.speak(message).listen(message);
         this.emit(':responseReady');
     }
@@ -132,8 +126,8 @@ var stateHandlers = {
          *  All Intent Handlers for state : RESUME_DECISION_MODE
          */
         'LaunchRequest' : function () {
-            var message = 'You are in the Pomodoro number ' + (this.attributes['pomodoroCnt'] + 1) + '. Say, next, to stop a ringing alarm. Would you like to resume?';
-            var reprompt = 'You can say yes to resume or no to play from the beginning.';
+            var message = this.t('RESUME_DECISION', this.attributes['pomodoroCnt'] + 1);
+            var reprompt = this.t('RESUME_DECISION_REPROMPT');
             this.response.speak(message).listen(reprompt);
             this.emit(':responseReady');
         },
@@ -222,11 +216,11 @@ function playTick(noSpeech, resume) {
             var ssml;
             if (resume) {
                 var offsetInMinutes = Math.round(offsetInMilliseconds / 1000 / 60);
-                ssml = `Resuming from Pomodoro number ${pomodoroCntBase1} at ${offsetInMinutes} minutes. ${25 - offsetInMinutes} minutes remaining. `
+                ssml = this.t('RESUME_FROM_POMODORO', pomodoroCntBase1, offsetInMinutes, 25 - offsetInMinutes);
             } else {
-                ssml = `Pomodoro number ${pomodoroCntBase1}. 25 minutes. `;
+                ssml = this.t('RESUME_FROM_BREAK', pomodoroCntBase1);
             }
-            ssml += 'Starting Now.'
+            ssml += ' ' + this.t('STARTING_NOW');
             this.response.speak(ssml);
         }
         url = audioData.getUrl('tick25m', isSilent);
@@ -235,10 +229,10 @@ function playTick(noSpeech, resume) {
         // break
         if (pomodoroCntBase1 % 4 === 0) {
             // finished a set of 4
-            if (!noSpeech) this.response.speak('Great! You\'ve finished a set of 4 pomodoros. Let\'s break for 20 minutes.');            
+            if (!noSpeech) this.response.speak(this.t('BREAK_FINISH_SET'));
             url = audioData.getUrl('tick20m', isSilent);
         } else {
-            if (!noSpeech) this.response.speak('Let\'s break for 5 minutes.');
+            if (!noSpeech) this.response.speak(this.t('BREAK_NORMAL'));
             url = audioData.getUrl('tick5m', isSilent);
         }
         token = 'break';
