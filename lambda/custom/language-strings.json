@@ -52,7 +52,7 @@
             "PROGRESS_BREAK": "Estás tomando un descanso después del número de Pomodoro %s, y el descanso ha comenzado para %s minutos. Cuando suene la alarma, diga, a continuar. ",
 
             "RESUME_FROM_POMODORO": "Resumiendo de número de Pomodoro %s a los %s minutos. %s minutos restantes. ",
-            "RESUME_FROM_BREAK": "Púmero de pomodoro %s. 25 minutos. ",
+            "RESUME_FROM_BREAK": "Número de pomodoro %s. 25 minutos. ",
             "STARTING_NOW": "Iniciando ahora.",
 
             "BREAK_FINISH_SET": "¡Genial! Has terminado un conjunto de 4 pomodoros. Vamos a pausar durante 20 minutos.",
