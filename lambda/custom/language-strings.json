@@ -28,5 +28,35 @@
             "BREAK_FINISH_SET": "Great! You've finished a set of 4 pomodoros. Let's break for 20 minutes.",
             "BREAK_NORMAL": "Let's break for 5 minutes."
         }
+    },
+    "es": {
+        "translation": {
+            "DEVICE_NOT_SUPPORTED": "Lo sentimos, esta habilidad no es compatible con este dispositivo",
+
+            "OPERATION_NOT_SUPPORTED": "Operación no soportada. Para saber qué puede hacer, diga, ayuda del ayudante de tomate.",
+
+            "WELCOME": "Bienvenido al ayudante de tomate. Si esta es la primera vez que usas esta habilidad, diga, ayuda. Recuerde, cuando suene la alarma, diga, continuar, para detenerla. Ahora, diga, iniciar temporizador, o iniciar temporizador silencioso.",
+            "WELCOME_REPROMPT": "Puede decir, iniciar, iniciar el temporizador en silencio o, ayuda.",
+
+            "HELP": "Ayudante de tomate es una habilidad para rastrear pomodoro con el fin de aumentar la productividad. Cada pomodoro dura 25 minutos y cada pausa dura 5 minutos. Después de 4 pomodoros, tienes un descanso de 20 minutos. Cuando suene la alarma, digamos, a continuación. Para verificar su progreso durante el tiempo, por ejemplo, Alexa, pídale ayuda al ayudante de tomate. Para comenzar a usar el ayudante de tomate, por ejemplo, iniciar el temporizador o iniciar el temporizador en silencio. ",
+            "HELP_REPROMPT": "Para comenzar a usar el ayudante de tomate, por ejemplo, iniciar el temporizador o iniciar el temporizador en silencio.",
+
+            "BYE": "Adiós",
+
+            "UNHANDLED": "Lo siento, no pude entender. Puedes decir, dile al ayudante de tomate ayuda.",
+
+            "RESUME_DECISION": "Estás en el número de Pomodoro %s. Diga, a continuación, detener alarma que suena. ¿Te gustaría reanudar? ",
+            "RESUME_DECISION_REPROMPT": "Puedes decir sí para reanudar o no para jugar desde el principio.",
+
+            "PROGRESS_POMODORO": "Estás en el número de Pomodoro %s a los %s minutos. %s minutos restantes. Cuando suene la alarma, diga, a continuar. ",
+            "PROGRESS_BREAK": "Estás tomando un descanso después del número de Pomodoro %s, y el descanso ha comenzado para %s minutos. Cuando suene la alarma, diga, a continuar. ",
+
+            "RESUME_FROM_POMODORO": "Resumiendo de número de Pomodoro %s a los %s minutos. %s minutos restantes. ",
+            "RESUME_FROM_BREAK": "Número de pomodoro %s. 25 minutos. ",
+            "STARTING_NOW": "Iniciando ahora.",
+
+            "BREAK_FINISH_SET": "¡Genial! Has terminado un conjunto de 4 pomodoros. Vamos a pausar durante 20 minutos.",
+            "BREAK_NORMAL": "Vamos a pausar por 5 minutos."
+        }
     }
 }
