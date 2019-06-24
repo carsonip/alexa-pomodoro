@@ -31,14 +31,14 @@
     },
     "es": {
         "translation": {
-            "DEVICE_NOT_SUPPORTED": "Lo sentimos, esta habilidad no es compatible con este dispositivo",
+            "DEVICE_NOT_SUPPORTED": "Lo sentimos, esta skill no es compatible con este dispositivo",
 
             "OPERATION_NOT_SUPPORTED": "Operación no soportada. Para saber qué puede hacer, diga, ayuda del ayudante de tomate.",
 
-            "WELCOME": "Bienvenido al ayudante de tomate. Si esta es la primera vez que usas esta habilidad, diga, ayuda. Recuerde, cuando suene la alarma, diga, continuar, para detenerla. Ahora, diga, iniciar temporizador, o iniciar temporizador silencioso.",
+            "WELCOME": "Bienvenido al ayudante de tomate. Si esta es la primera vez que usas esta skill, diga, ayuda. Recuerde, cuando suene la alarma, diga, continuar, para detenerla. Ahora, diga, iniciar temporizador, o iniciar temporizador silencioso.",
             "WELCOME_REPROMPT": "Puede decir, iniciar, iniciar el temporizador en silencio o, ayuda.",
 
-            "HELP": "Ayudante de tomate es una habilidad para rastrear pomodoro con el fin de aumentar la productividad. Cada pomodoro dura 25 minutos y cada pausa dura 5 minutos. Después de 4 pomodoros, tienes un descanso de 20 minutos. Cuando suene la alarma, digamos, a continuación. Para verificar su progreso durante el tiempo, por ejemplo, Alexa, pídale ayuda al ayudante de tomate. Para comenzar a usar el ayudante de tomate, por ejemplo, iniciar el temporizador o iniciar el temporizador en silencio. ",
+            "HELP": "Ayudante de tomate es una skill para rastrear pomodoro con el fin de aumentar la productividad. Cada pomodoro dura 25 minutos y cada pausa dura 5 minutos. Después de 4 pomodoros, tienes un descanso de 20 minutos. Cuando suene la alarma, digamos, a continuación. Para verificar su progreso durante el tiempo, por ejemplo, Alexa, pídale ayuda al ayudante de tomate. Para comenzar a usar el ayudante de tomate, por ejemplo, iniciar el temporizador o iniciar el temporizador en silencio. ",
             "HELP_REPROMPT": "Para comenzar a usar el ayudante de tomate, por ejemplo, iniciar el temporizador o iniciar el temporizador en silencio.",
 
             "BYE": "Adiós",
