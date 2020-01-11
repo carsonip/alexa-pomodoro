@@ -58,5 +58,37 @@
             "BREAK_FINISH_SET": "¡Genial! Has terminado un conjunto de 4 pomodoros. Vamos a pausar durante 20 minutos.",
             "BREAK_NORMAL": "Vamos a pausar por 5 minutos."
         }
+    },
+    "pt-BR": {
+        "translation": {
+            "DEVICE_NOT_SUPPORTED": "Desculpe, esta skill não é suportado neste dispositivo.",
+
+            "OPERATION_NOT_SUPPORTED": "Operação não suportada. Para descobrir o que você pode fazer, diga, tomato ajuda.",
+
+            "WELCOME": "Bem vindo ao tomato. Se está é a primeira vez que você está usando essa skill, diga, ajuda. Lembre-se que, quando um alarme tocar, diga, próximo, para parar ele. Agora diga, iniciar timer, ou, iniciar timer silencioso.",
+
+            "WELCOME_REPROMPT": "Você pode dizer, iniciar, iniciar timer silencioso, ou, ajuda.",
+
+            "HELP": "Tomato é uma skill para acompanhar pomodoros com o objetivo de melhorar a sua produtividade. Cada pomodoro dura 25 minutos e cada descanso dura 5 minutos. Depois de 4 pomodoros, você pode fazer um descanso de 20 minutos. Quando o alarme tocar, diga, próximo. Para checar o seu progresso durante o timer, diga, Alexa, pergunte ao tomato tempo restante. Para começar a usar o Tomato, basta dizer, iniciar timer, ou, iniciar timer silencioso.",
+
+            "HELP_REPROMPT": "Para começar a usar o Tomato, basta dizer, iniciar timer, ou, iniciar timer silencioso. ",
+
+            "BYE": "Até mais!",
+
+            "UNHANDLED": "Desculpe, eu não consegui entender. Você pode dizer, tomato ajuda, para obter ajuda desta skill.",
+
+            "RESUME_DECISION": "Você está no pomodoro número %s. Diga, próximo, para parar o alarme. Gostaria de continuar?",
+            "RESUME_DECISION_REPROMPT": "Você pode dizer, Sim, para continuar de onde você parou ou, Não, para começar do zero .",
+
+            "PROGRESS_POMODORO": "Você está no Pomodoro número %s em %s minutos. %s minutos restantes. Quando o alarme tocar, diga, próximo",
+            "PROGRESS_BREAK": "Você vai tirar um intervalo para descanso após o Pomodoro número %s, e o intervalo de descanso é de %s minutos. Quando o alarme tocar, diga, próximo. ",
+
+            "RESUME_FROM_POMODORO": "Continuando do ]Pomodoro número %s em %s minutos. %s minutos restantes. ",
+            "RESUME_FROM_BREAK": "Pomodoro número %s. 25 minutos. ",
+            "STARTING_NOW": "Começando Agora.",
+
+            "BREAK_FINISH_SET": "Ótimo! Você finalizou 4 pomodoros. Agora é hora de descansar por 20 minutos.",
+            "BREAK_NORMAL": "Agora você deve descansar 5 minutos."
+        }
     }
 }
