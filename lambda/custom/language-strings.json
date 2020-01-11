@@ -83,7 +83,7 @@
             "PROGRESS_POMODORO": "Você está no Pomodoro número %s em %s minutos. %s minutos restantes. Quando o alarme tocar, diga, próximo",
             "PROGRESS_BREAK": "Você vai tirar um intervalo para descanso após o Pomodoro número %s, e o intervalo de descanso é de %s minutos. Quando o alarme tocar, diga, próximo. ",
 
-            "RESUME_FROM_POMODORO": "Continuando do ]Pomodoro número %s em %s minutos. %s minutos restantes. ",
+            "RESUME_FROM_POMODORO": "Continuando a partir do Pomodoro número %s , em %s minutos. %s minutos restantes. ",
             "RESUME_FROM_BREAK": "Pomodoro número %s. 25 minutos. ",
             "STARTING_NOW": "Começando Agora.",
 
