@@ -180,12 +180,11 @@
             "technique",
             "técnica"
           ],
-          "name": "Tomato",
+          "name": "Tomato Helper",
           "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4f50894025134ad28e732ecfa516f322/APP_ICON?versionId=65hwYkpD85KnQ4Z5DxbnJoGbbtMvvduz&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=%2F6X2CJN%2BduhZ6sG0XicRrFxU5D0%3D",
           "description": "Suas vozes foram escutadas! Um timer silencioso agora está disponível. Se vocês tiverem mais sugestões, por favor usem as Issues do Github (link abaixo).\n\nSkill não oficial da Técnica Pomodoro, que melhora sua produtividade usando 25 minutos focados e 5 minutos descansando. Essa técnica aumenta a produtividade e reduz a distraçao/procrastinaçao.\n\nDepois de dizer \"Alexa, iniciar tomato\", seguido por \"iniciar timer\" ou \"iniciar timer silencioso\", será criado um timer de 25 minutos. Depois de 25 minutos, o alarme irá tocar para notificar o usuário que é hora de um descanso. O usuário deve dizer \"Alexa, próximo\" para parar o alarme e iniciar o tempo de descanso. Depois do descanso, o usuário precisa dizer \"Alexa, próximo\" para começar o novo período de 25 minutos focados. Depois de 4 períodos de 25 minutos, terá uma pausa maior de 20 minutos.\n\nQuando o timer estiver rodando, diga \"Alexa, pergunte ao tomato tempo restante\" para checar o tempo restante.\n\nQuando você desejar sair, diga \"Alexa, pare\".\n\nEste é um projeto open-source hospedado pelo Github em: https://github.com/carsonip/alexa-pomodoro\nSe você tem alguma sugestão ou problema para relatar, entre em: https://github.com/carsonip/alexa-pomodoro/issues\nNota: esta skill não está associada a \"Técnica Pomodoro\", \"Pomodoro\" e Francesco Cirillo.\nOs nomes 'Pomodoro Technique®' e 'Pomodoro™' são marcas registradas por Francesco Cirillo.",
           "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/e8d3/8b22757cd5594017962ed32a77e8abec/APP_ICON_LARGE?versionId=rxa8boqcQJbnQA_SFzxJhvC9rlw4Vu_C&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=ffkPk%2B5Vj6Lhs24fj503giwYXE8%3D"
-        },
-
+        }
       },
       "isAvailableWorldwide": true,
       "testingInstructions": "Saying \"Alexa, next\" during ticking can skip you to the ringing alarm part. So you don't have to wait for 25mins before the alarm.",

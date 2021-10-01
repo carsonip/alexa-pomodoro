@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "tomato",
+      "invocationName": "tomato helper",
       "intents": [
         {
           "name": "StartPomodoro",
