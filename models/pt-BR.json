@@ -1,0 +1,104 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "tomato helper",
+      "intents": [
+        {
+          "name": "StartPomodoro",
+          "samples": [
+            "iniciar",
+            "iniciar pomodoro",
+            "iniciar tomato",
+            "iniciar tomate",
+            "iniciar helper",
+            "iniciar timer",
+            "começar",
+            "começar pomodoro",
+            "começar tomato",
+            "começar tomate",
+            "começar helper",
+            "começar timer",
+            "abrir",
+            "abrir pomodoro",
+            "abrir tomato",
+            "abrir tomate",
+            "abrir helper",
+            "abrir timer"
+          ]
+        },
+        {
+          "name": "StartSilentPomodoro",
+          "samples": [
+            "silêncio",
+            "silencioso",
+            "mudo",
+            "quieto",
+            "iniciar mudo",
+            "iniciar quieto",
+            "iniciar silêncio",
+            "iniciar silêncio tomato",
+            "iniciar silêncio tomate",
+            "iniciar silêncio timer",
+            "iniciar silencioso",
+            "iniciar silenciosa",
+            "iniciar silencioso tomato",
+            "iniciar silencioso tomate",
+            "iniciar silencioso timer",
+            "iniciar silenciosa tomato",
+            "iniciar silenciosa tomate",
+            "iniciar silenciosa timer",
+            "iniciar tomate silenciosa",
+            "iniciar tomate silencioso",
+            "iniciar tomato silencioso",
+            "iniciar tomato silenciosa",
+            "iniciar timer silenciosa",
+            "iniciar timer silencioso"
+          ]
+        },
+        {
+          "name": "Progress",
+          "samples": [
+            "progresso",
+            "status",
+            "tempo",
+            "restante",
+            "meu progresso",
+            "tempo restante",
+            "status timer",
+            "timer status"
+          ]
+        },
+        {
+          "name": "AMAZON.PauseIntent"
+        },
+        {
+          "name": "AMAZON.ResumeIntent"
+        },
+        {
+          "name": "AMAZON.NextIntent"
+        },
+        {
+          "name": "AMAZON.PreviousIntent"
+        },
+        {
+          "name": "AMAZON.HelpIntent"
+        },
+        {
+          "name": "AMAZON.StopIntent"
+        },
+        {
+          "name": "AMAZON.CancelIntent"
+        },
+        {
+          "name": "AMAZON.StartOverIntent"
+        },
+        {
+          "name": "AMAZON.YesIntent"
+        },
+        {
+          "name": "AMAZON.NoIntent"
+        }
+      ]
+    }
+  }
+}

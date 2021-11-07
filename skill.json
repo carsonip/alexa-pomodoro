@@ -161,6 +161,29 @@
           "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4f50894025134ad28e732ecfa516f322/APP_ICON?versionId=65hwYkpD85KnQ4Z5DxbnJoGbbtMvvduz&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=%2F6X2CJN%2BduhZ6sG0XicRrFxU5D0%3D",
           "description": "Sus voces han sido escuchadas! Ahora está disponible un temporizador de silencio. Si tiene más comentarios, cree un problema en los problemas de GitHub. El enlace está en la parte inferior.\n\nEsta es una skill no oficial de la Técnica Pomodoro. Es un temporizador que permite al usuario trabajar durante 25 minutos y luego descansar durante 5 minutos. Tal patrón aumenta la productividad y minimiza la distracción.\n\nDespues de decir \"Alexa, iniciar ayudante de tomate\", seguido por \"iniciar temporizador\" o \"iniciar temporizador silencioso\", habrá una cuenta atrás de 25 minutos. Después de 25 minutos, la alarma sonará para notificar al usuario que es hora de un descanso. El usuario debería decir \"Alexa, siguiente\" para detener la alarma y comenzar el descanso. Después de la pausa, el usuario debe decir. \"Alexa, siguiente\" para comenzar los próximos 25 minutos de trabajo. Después de 4 periodos de 25 minutos, habrá un descanso más largo de 20 minutos.\n\nCuando el temporizador está funcionando, diga \"Alexa, pide a ayudante de tomate el progreso\" para saber el progreso.\n\nCuando hayas terminado, di \"Alexa, detente\".\n\nEste es un proyecto de código abierto alojado en GitHub disponible en https://github.com/carsonip/alexa-pomodoro\nSi tiene algún problema o comentario, cree un problema en https://github.com/carsonip/alexa-pomodoro/issues\n\nNote: Esta skill no está asociada de ninguna manera con el \"Técnica Pomodoro\", \"Pomodoro\" y Francesco Cirillo.\nLa Técnica Pomodoro y Pomodoro™ son marcas registradas por Francesco Cirillo.",
           "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/e8d3/8b22757cd5594017962ed32a77e8abec/APP_ICON_LARGE?versionId=rxa8boqcQJbnQA_SFzxJhvC9rlw4Vu_C&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=ffkPk%2B5Vj6Lhs24fj503giwYXE8%3D"
+        },
+        "pt-BR": {
+          "summary": "Skill não oficial da Técnica Pomodoro, que melhora sua produtividade usando 25 minutos focados em alguma atividade/tarefa e 5 minutos de descanso.",
+          "examplePhrases": [
+            "Alexa, iniciar Tomato",
+            "Iniciar timer",
+            "Alexa, próximo"
+          ],
+          "keywords": [
+            "pomodoro",
+            "timer",
+            "tomato",
+            "tomate",
+            "helper",
+            "productivity",
+            "produtividade",
+            "technique",
+            "técnica"
+          ],
+          "name": "Tomato Helper",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4f50894025134ad28e732ecfa516f322/APP_ICON?versionId=65hwYkpD85KnQ4Z5DxbnJoGbbtMvvduz&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=%2F6X2CJN%2BduhZ6sG0XicRrFxU5D0%3D",
+          "description": "Suas vozes foram escutadas! Um timer silencioso agora está disponível. Se vocês tiverem mais sugestões, por favor usem as Issues do Github (link abaixo).\n\nSkill não oficial da Técnica Pomodoro, que melhora sua produtividade usando 25 minutos focados e 5 minutos descansando. Essa técnica aumenta a produtividade e reduz a distraçao/procrastinaçao.\n\nDepois de dizer \"Alexa, iniciar tomato\", seguido por \"iniciar timer\" ou \"iniciar timer silencioso\", será criado um timer de 25 minutos. Depois de 25 minutos, o alarme irá tocar para notificar o usuário que é hora de um descanso. O usuário deve dizer \"Alexa, próximo\" para parar o alarme e iniciar o tempo de descanso. Depois do descanso, o usuário precisa dizer \"Alexa, próximo\" para começar o novo período de 25 minutos focados. Depois de 4 períodos de 25 minutos, terá uma pausa maior de 20 minutos.\n\nQuando o timer estiver rodando, diga \"Alexa, pergunte ao tomato tempo restante\" para checar o tempo restante.\n\nQuando você desejar sair, diga \"Alexa, pare\".\n\nEste é um projeto open-source hospedado pelo Github em: https://github.com/carsonip/alexa-pomodoro\nSe você tem alguma sugestão ou problema para relatar, entre em: https://github.com/carsonip/alexa-pomodoro/issues\nNota: esta skill não está associada a \"Técnica Pomodoro\", \"Pomodoro\" e Francesco Cirillo.\nOs nomes 'Pomodoro Technique®' e 'Pomodoro™' são marcas registradas por Francesco Cirillo.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/e8d3/8b22757cd5594017962ed32a77e8abec/APP_ICON_LARGE?versionId=rxa8boqcQJbnQA_SFzxJhvC9rlw4Vu_C&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1523178970&Signature=ffkPk%2B5Vj6Lhs24fj503giwYXE8%3D"
         }
       },
       "isAvailableWorldwide": true,
